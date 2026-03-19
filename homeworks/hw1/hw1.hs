@@ -28,15 +28,16 @@ coprimePairs xs=[(x,y)|x<-xs,y<-xs,x<y,gcd x y==1]
    ```
    Finally, use `primesTo` to define `isPrime :: Int -> Bool` that checks whether a given positive integer is prime.sieve :: [Int] -> [Int] -}
    
-sieve::[Int]->[Int]
-sieve[]=[]
-sieve(p:xs)=p:sieve [x|x<-xs,x`mod`p/=0]
+   
+sieve :: [Int] -> [Int]
+sieve [] = []
+sieve (p:xs) = p : sieve [x | x <- xs, x `mod` p /= 0]
 
-primesTo::Int->[Int]
-primesTo n=sieve[2..n]
+primesTo :: Int -> [Int]
+primesTo n = sieve [2..n]
 
-isPrime::Int->Bool
-isPrime n|n<2=False|otherwise=n`elem`primesTo n
+isPrime :: Int -> Bool
+isPrime n| n < 2 = False| otherwise = n `elem` primesTo n
 
 {- 4. **Matrix Multiplication**
    Represent a matrix as `[[Int]]` (a list of rows). Write
