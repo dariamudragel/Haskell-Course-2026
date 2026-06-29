@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
-<rect x="0" y="0" width="800" height="600" fill="none" stroke="black"/>
-<rect x="0" y="0" width="640" height="600" fill="red" stroke="black"/>
-<rect x="640" y="0" width="160" height="600" fill="blue" stroke="black"/>
-</svg>
